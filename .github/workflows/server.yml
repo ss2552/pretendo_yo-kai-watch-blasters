@@ -1,0 +1,16 @@
+name: Server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  server:
+    runs-on: alpine
+    container: pretendonetwork/yo-kai-watch-blasters:sha-90c3511
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run
+        run: |
+          
