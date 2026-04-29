@@ -2,12 +2,12 @@
 
 ### https://github.com/PretendoNetwork/yo-kai-watch-blasters
 
-## Configuration
-All configuration options are handled via environment variables
+## 構成
+全ての構成情報は環境変数で掴む
 
-`.env` files are supported
+`.env`ファイルでも可能
 
-| Name                                      | Description                                                                                     | Required                                      |
+| 名前                                      | 概要                                                                                     | 必修                                      |
 |-------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | `PN_YKWB_KERBEROS_PASSWORD`          | Password used as part of the internal server data in Kerberos tickets                           | No (Default password `password` will be used) |
 | `PN_YKWB_AUTHENTICATION_SERVER_PORT` | Port for the authentication server                                                              | Yes                                           |
