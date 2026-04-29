@@ -15,9 +15,8 @@
 | `PN_YKWB_SECURE_SERVER_PORT`         | Port for the secure server                                                                      | はい                                           |
 | `PN_YKWB_ACCOUNT_GRPC_HOST`          | Host name for your account server gRPC service                                                  | はい                                           |
 | `PN_YKWB_ACCOUNT_GRPC_PORT`          | Port for your account server gRPC service                                                       | はい                                           |
-| `PN_YKWB_ACCOUNT_GRPC_API_KEY`       | API key for your account server gRPC service                                                    | いいえ (Assumed to be an open gRPC API)           |
+| `PN_YKWB_ACCOUNT_GRPC_API_KEY`       | API key for your account server gRPC service                                                    | いいえ (想定されるgRPC APIを使用する)              |
 | `PN_YKWB_FRIENDS_GRPC_HOST`          | Host name for your friends server gRPC service                                                  | はい                                           |
 | `PN_YKWB_FRIENDS_GRPC_PORT`          | Port for your friends server gRPC service                                                       | はい                                           |
-| `PN_YKWB_FRIENDS_GRPC_API_KEY`       | API key for your friends server gRPC service                                                    | いいえ (Assumed to be an open gRPC API)           |
-| `PN_YKWB_POSTGRES_URI`               | URI for matchmaking PostgeSQL server                                          
-                | はい                                           |
+| `PN_YKWB_FRIENDS_GRPC_API_KEY`       | API key for your friends server gRPC service                                                    | いいえ (想定されるgRPC APIを使用する)              |
+| `PN_YKWB_POSTGRES_URI`               | URI for matchmaking PostgeSQL server                                                            | はい                                           |
