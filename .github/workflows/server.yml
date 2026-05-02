@@ -5,14 +5,22 @@ on:
 
 jobs:
   server:
-    runs-on: alpine
+    runs-on: ubuntu-latest
     container: pretendonetwork/yo-kai-watch-blasters:sha-90c3511
     steps:
       - uses: actions/checkout@v4
+      
+      - name: make
+        run: make
+        
       - name: ls
         run: ls "/home/go/app/"
       
-    
+      - uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: ./
+        
       #- name: database
       #  run: sudo apt install postgresql -y && sh ./postgres.sh
  
