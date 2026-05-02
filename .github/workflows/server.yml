@@ -16,4 +16,6 @@ jobs:
         
       #- name: ip address
       #  run: 
-        
+
+      - name: ls
+        run: ls "/home/go/app/"
