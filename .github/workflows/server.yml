@@ -7,28 +7,20 @@ jobs:
   server:
     runs-on: alpine
     container: pretendonetwork/yo-kai-watch-blasters:sha-90c3511
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v4
       - name: ls
         run: ls "/home/go/app/"
 
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
       
     
       #- name: database
       #  run: sudo apt install postgresql -y && sh ./postgres.sh
  
-  deploy:
-    if: github.ref == 'refs/heads/publish'
-    needs: server
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
