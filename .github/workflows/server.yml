@@ -17,6 +17,18 @@ jobs:
     
       #- name: database
       #  run: sudo apt install postgresql -y && sh ./postgres.sh
-        
-      #- name: ip address
-      #  run: 
+ 
+  deploy:
+    if: github.ref == 'refs/heads/publish'
+    needs: server
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
