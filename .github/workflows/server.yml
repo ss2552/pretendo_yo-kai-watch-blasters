@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Run
+      - name: database
         run: |
           
+      - name: server
+        run: |
+        
+      - name: ip address
+        run: |
+        
