@@ -11,12 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: database
-        run: |
-          
-      - name: server
-        run: |
+      #- name: database
+      #  run: sudo apt install postgresql -y && sh ./postgres.sh
         
-      - name: ip address
-        run: |
+      #- name: ip address
+      #  run: 
         
